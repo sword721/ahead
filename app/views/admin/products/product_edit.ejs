@@ -1,0 +1,64 @@
+<% include ../includes/head %>
+<% include ../includes/header %>
+<script charset="utf-8" src="/editor/kindeditor.js"></script>
+<script charset="utf-8" src="/editor/lang/zh_CN.js"></script>
+<script type="text/javascript">
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('#editor_id');
+    });
+</script>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <% include ../includes/sidebar %>
+        <div class="span9">
+            <div class="row-fluid">
+                <div class="box span12">
+                    <div class="box-header well">
+                        <h2><i class="icon-info-sign"></i>产品管理</h2>
+
+                        <div class="box-icon">
+                            <!--<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>-->
+                            <!--<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>-->
+                            <!--<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>-->
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" action="/admin/update_product" method="POST">
+                            <input type="hidden" id="id" name="id" value="<%=product.id%>" />
+                            <div class="control-group">
+                                <label class="control-label" for="name">名称</label>
+                                <div class="controls">
+                                    <input type="text" id="name" name="name" value="<%=product.name%>" placeholder="标题">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="title">简介</label>
+                                <div class="controls">
+                                    <textarea rows="3" cols="20" id="title" name="title" placeholder="简介">
+                                        <%=product.title%>
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="editor_id">详细介绍</label>
+                                <div class="controls">
+                                    <textarea id="editor_id" name="description" style="width:700px;height:300px;">
+                                        <%=product.description%>
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ../includes/footer %>
+</div>

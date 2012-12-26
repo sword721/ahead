@@ -1,0 +1,55 @@
+<% include includes/head %>
+
+<body id="subpage">
+<div id="templatemo_wrapper">
+    <% include includes/header %>
+
+    <div id="templatemo_main">
+        <div id="content" class="float_r">
+            <div class="row-fluid">
+                <!--<img src="images/blog/01.jpg" alt="Image 01" />-->
+                <div class="row">
+                    <h2><a href="blog_post.html"><%=product.name%></a></h2>
+                    <div class="meta">
+                        <span class="date"><%=locals.formatDate(product.created_at)%></span>
+                        <div class="cleaner"></div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <%-product.description%>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar" class="float_l">
+            <h3>Services</h3>
+            <ul class="templatemo_list">
+                <li>Augue felis pharetra felis sed</li>
+                <li>Condimentum vulputate augue</li>
+                <li>Dolor vel condimentum</li>
+                <li>Felis pharetra felis sed</li>
+                <li>Integer placerat dolor vel</li>
+                <li>Tortor mi in massa donec</li>
+                <li>Vulputate tortor mi in massa</li>
+            </ul>
+
+            <div class="cleaner h40"></div>
+            <h3>Flickr Stream</h3>
+            <ul class="flickr_stream">
+                <li><a href="#"><img src="/images/templatemo_image_07.png" alt="Image 01" /></a></li>
+                <li><a href="#"><img src="/images/templatemo_image_08.png" alt="Image 02" /></a></li>
+                <li class="no_margin_right"><a href="#"><img src="/images/templatemo_image_09.png" alt="Image 03" /></a></li>
+                <li><a href="#"><img src="/images/templatemo_image_10.png" alt="Image 04" /></a></li>
+                <li><a href="#"><img src="/images/templatemo_image_11.png" alt="Image 05" /></a></li>
+                <li class="no_margin_right"><a href="#"><img src="/images/templatemo_image_12.png" alt="Image 06" /></a></li>
+                <li><a href="#"><img src="/images/templatemo_image_07.png" alt="Image 07" /></a></li>
+                <li><a href="#"><img src="/images/templatemo_image_09.png" alt="Image 08" /></a></li>
+                <li class="no_margin_right"><a href="#"><img src="/images/templatemo_image_08.png" alt="Image 09" /></a></li>
+            </ul>
+        </div>
+
+        <div class="cleaner"></div>
+    </div> <!-- END of main -->
+</div> <!-- END of wrapper -->
+<% include includes/footer %>
+</body>
+</html>

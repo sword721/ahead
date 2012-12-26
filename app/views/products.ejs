@@ -1,0 +1,67 @@
+<% include includes/head %>
+
+<body id="subpage">
+<div id="templatemo_wrapper">
+    <% include includes/header %>
+
+    <div id="templatemo_main">
+        <div class="col one_third">
+        <h3>Categories</h3>
+        <ul class="templatemo_list">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">T-shirt</a> Design</li>
+            <li><a href="#">Icon Design</a></li>
+        </ul>
+
+        <div class="cleaner divider"></div>
+
+        <h3>Flickr Stream</h3>
+        <ul class="flickr_stream">
+            <li><a href="#"><img src="images/templatemo_image_07.png" alt="Image 01" /></a></li>
+            <li><a href="#"><img src="images/templatemo_image_08.png" alt="Image 02" /></a></li>
+            <li class="no_margin_right"><a href="#"><img src="images/templatemo_image_09.png" alt="Image 03" /></a></li>
+            <li><a href="#"><img src="images/templatemo_image_10.png" alt="Image 04" /></a></li>
+            <li><a href="#"><img src="images/templatemo_image_11.png" alt="Image 05" /></a></li>
+            <li class="no_margin_right"><a href="#"><img src="images/templatemo_image_12.png" alt="Image 06" /></a></li>
+            <li><a href="#"><img src="images/templatemo_image_07.png" alt="Image 07" /></a></li>
+            <li><a href="#"><img src="images/templatemo_image_09.png" alt="Image 08" /></a></li>
+            <li class="no_margin_right"><a href="#"><img src="images/templatemo_image_08.png" alt="Image 09" /></a></li>
+        </ul>
+    </div>
+
+        <div class="col two-third no_margin_right">
+            <h2>成功案例展示</h2>
+            <ul id="gallery">
+                <% products.forEach(function(product, index){%>
+                <li>
+                    <a  rel="lightbox[portfolio]" href="product/<%=product.id%>">
+                        <img src="images/gallery/product_01.png" alt="Image 01" />
+                        <p>&nbsp;&nbsp;<%=product.title%></p>
+                    </a>
+                </li>
+                <%})%>
+
+            </ul>
+            <div class="cleaner h40"></div>
+
+            <div class="pagging">
+                <ul>
+                    <li><a href="#" target="_parent">Previous</a></li>
+                    <li><a href="http://www.cssmoban.com/" target="_parent">1</a></li>
+                    <li><a href="#" target="_parent">2</a></li>
+                    <li><a href="#" target="_parent">3</a></li>
+                    <li><a href="#" target="_parent">4</a></li>
+                    <li><a href="#" target="_parent">5</a></li>
+                    <li><a href="#" target="_parent">6</a></li>
+                    <li><a href="#" target="_parent">Next</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="cleaner"></div></div> <!-- END of main -->
+</div> <!-- END of wrapper -->
+<% include includes/footer %>
+</body>
+</html>

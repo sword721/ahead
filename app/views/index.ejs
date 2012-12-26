@@ -1,0 +1,76 @@
+<% include includes/head %>
+<script type="text/javascript">
+    var flashvars = {};
+    flashvars.cssSource = "stylesheets/piecemaker.css";
+    flashvars.xmlSource = "piecemaker.xml";
+
+    var params = {};
+    params.play = "true";
+    params.menu = "false";
+    params.scale = "showall";
+    params.wmode = "transparent";
+    params.allowfullscreen = "true";
+    params.allowscriptaccess = "always";
+    params.allownetworking = "all";
+
+    swfobject.embedSWF('piecemaker.swf', 'piecemaker', '560', '340', '10', null, flashvars,
+            params, null);
+
+</script>
+
+<body id="home">
+
+<div id="templatemo_wrapper">
+    <% include includes/header %>
+    <% include includes/slider %>
+    <div id="templatemo_main">
+        <div class="col one_third fp_services">
+            <img src="images/tick-64px.png" alt="Image 01"/>
+            <h2><a href="#">优质的服务</a></h2>
+            <p>我们为您提供最优质的服务，全程开发进度跟踪，随时随地查看.</p>
+        </div>
+
+        <div class="col one_third fp_services">
+            <img src="images/rosette-64px.png" alt="Image 02"/>
+            <h2><a href="bar_slider_click.html">成熟的方案</a></h2>
+            <p>我们拥有多套成熟的技术方案，具有非常好的稳定性和健壮性.</p>
+        </div>
+
+        <div class="col one_third no_margin_right fp_services">
+            <img src="images/post-it-64px.png" alt="Image 03"/>
+            <h2><a href="#">实惠的价格</a></h2>
+            <p>拥有业内最有竞争力的性价比.</p>
+        </div>
+
+        <div class="cleaner divider"></div>
+
+        <div class="col one_fourth">
+            <h3>最近产品案例</h3>
+            <p>在此为您展示我们最近完成的一些优秀产品案例.<a href="#">查看更多</a></p>
+        </div>
+
+        <div class="col one_fourth fp_rw">
+            <a href="#">
+                <img src="images/product_01.png" alt="查看案例" title="查看案例" />
+            </a>
+            <p>Android平板UI定制，这个产品是根据客户的要求，对Android系统的UI做了定制和优化.基于android系统2.3版本. </p>
+
+        </div>
+
+        <div class="col one_fourth fp_rw">
+            <img src="images/product_02.png" alt="Image 02" />
+            <p>贵阳神龙食品网，贵阳食品生产设备在线展示交易网站.</p>
+        </div>
+
+        <div class="col one_fourth fp_rw no_margin_right">
+            <img src="images/templatemo_image_03.jpg" alt="Image 03" />
+            <p> Sed laoreet  lorem, in porta massa varius eu varius lacus eget ligula facilisis rutrum.</p>
+        </div>
+
+
+        <div class="cleaner"></div>
+    </div> <!-- END of main -->
+</div>
+<% include includes/footer %>
+</body>
+</html>
