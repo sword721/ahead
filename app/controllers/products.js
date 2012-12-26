@@ -117,7 +117,7 @@ exports.new_product = function(req, res) {
 };
 
 /**
- * 进入产品展示页面
+ * 进入产品展示页面方法
  * @param req
  * @param res
  */
