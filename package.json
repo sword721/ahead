@@ -16,6 +16,7 @@
         "connect-mongodb": "latest",
         "async": "latest",
         "express-namespace": "latest",
-        "weibo": "latest"
+        "weibo": "latest",
+        "underscore": "latest"
     }
 }

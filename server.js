@@ -25,7 +25,7 @@ if(process.env.VCAP_SERVICES){
 } else {
     mongoose.connect(config.db);
 }
-//mongoose.connect("sTFoiFDjI5tr:CxXi9ZaGZn@127.0.0.1:20088/j22vxqtM1nJe");
+//mongoose.connect("sTFoiFDjI5tr:CxXi9ZaGZn@127.0.0.1:20088/gogtcWyTlHPz");
 
 var models_path = __dirname + '/app/models'
     , model_files = fs.readdirSync(models_path);

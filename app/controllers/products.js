@@ -6,7 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 var mongoose = require('mongoose');
-var Product = mongoose.model('Product');
+var Product = mongoose.model('Product'),
+    _ = require('underscore');
 
 /**
  * 前台产品列表页面
@@ -79,30 +80,22 @@ exports.edit_product = function(req, res) {
 };
 
 exports.update_product = function(req, res) {
-    var prod = new Product(req.body);
-//    Product.findById(prod.id,function(err, product){
-//        product.name = prod.name;
-//        product.save(function(err){
-//            return res.redirect('admin/product_list');
-//        });
-//    });
-    console.log(prod);
-    var id = prod.id;
-    Product.update({_id:id},{$set:{name:prod.name}},{multi:true},function(err,numbers,raw){
-        return res.redirect('admin/product_list');
+
+    var query = Product.findById(req.body.id);
+    query.exec(function(err,product){
+        if (err){
+
+        }
+//        product = prod;
+
+        product = _.extend(product, req.body);
+        console.log(product);
+        product.save(function(err){
+            return res.redirect('admin/product_list');
+        });
+
     });
-//    delete prod._id;
-//    Product.findByIdAndUpdate(id,prod,function(err, product){
-//        if (err){
-//            console.log(err);
-//            return res.render('admin/products/product_edit',{
-//                errors:err,
-//                msg:'',
-//                product:product
-//            });
-//        }
-//        return res.redirect('admin/product_list');
-//    });
+
 };
 
 /**
